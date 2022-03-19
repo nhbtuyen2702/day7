@@ -33,33 +33,37 @@ public class Lession7 {
 		 int[] arr2 = {15, 5, 10, 25, 30};
 		 System.out.println(Arrays.toString(arr2)); //[15, 5, 10, 30, 25]
 		// Sắp xếp các giá trị của mảng tăng dần
-	     //Arrays.sort(arr2); //sắp xếp tăng dần
+	     Arrays.sort(arr2); //sắp xếp tăng dần
 	     //System.out.println(Arrays.toString(arr2)); //[5, 10, 15, 25, 30]
 	     int index = Arrays.binarySearch(arr2, 30);//tìm kiếm index(chỉ mục) của 1 số
 	     System.out.println(index);
 	     Arrays.fill(arr2, 25);//gán cùng 1 giá trị cho tất cả phần tử trong mảng
 	     System.out.println(Arrays.toString(arr2));
 	     
-	     int[][] arr3 = new int[2][3];//[dòng][cột]
+	     int[][] arr3 = new int[2][];//[dòng][cột]
+	     arr3[0] = new int[4];
 	     arr3[0][0] = 3;
 	     arr3[0][1] = 5;
 	     arr3[0][2] = 4;
+	     arr3[0][3] = 5;
+	     arr3[1] = new int[3];
 	     arr3[1][0] = 6;
 	     arr3[1][1] = 8;
 	     arr3[1][2] = 7;
 	     
-	     for (int i = 0; i < arr3.length; i++) {//i = dòng
-	    	 for (int j = 0; j < arr3[i].length; j++) {//arr3[0].length = 3		arr3[1].length = 3
+	     for (int i = 0; i < arr3.length; i++) {//arr3.length = số dòng
+	    	 for (int j = 0; j < arr3[i].length; j++) {//arr3[0].length = 4		arr3[1].length = 3
 	    		 System.out.print(arr3[i][j] + " ");
 	    	 }
 		}
 	    //chỉ cần biết chiều dài của dòng đó -->số cột
 	    System.out.println("------");
-	    int[][] arr4 = {{3, 5, 4}, {6, 8, 7}}; //1 {} tương ứng với 1 dòng
-	    for (int i = 0; i < arr4.length; i++) {//i = dòng
+	    int[][] arr4 = {{3, 5, 4, 8}, {6, 8, 7}}; //1 {} tương ứng với 1 dòng
+	    for (int i = 0; i < arr4.length; i++) {//arr4.length = số dòng
 	    	 for (int j = 0; j < arr4[i].length; j++) {//arr4[0].length = 3
 	    		 System.out.print(arr4[i][j] + " ");
 	    	 }
+	    	 System.out.println("*********");
 		}
 		
 		
